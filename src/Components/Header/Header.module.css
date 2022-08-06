@@ -1,0 +1,19 @@
+.header {
+  grid-area: h;
+  background: rgb(39, 39, 39);
+  /* background: linear-gradient(
+    90deg,
+    rgba(59, 104, 193, 1) 30%,
+    rgba(53, 48, 143, 1) 45%,
+    rgba(68, 40, 154, 1) 55%,
+    rgba(128, 39, 123, 0.9) 74%,
+    rgba(186, 59, 51, 1) 100%
+  ); */
+  border-radius: 40px;
+}
+
+.header .logo{
+  margin-left: 6px;
+  width: 60px;
+  filter: invert(100%);
+}

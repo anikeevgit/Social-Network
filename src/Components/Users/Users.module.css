@@ -1,0 +1,14 @@
+.usersBody {
+  color: white;
+}
+.userPhoto {
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgb(45, 45, 45);
+  border: 1px solid darkorchid;
+}
+
+.selectedPage {
+  font-weight: bold;
+  color: darkorchid;
+}

@@ -1,0 +1,21 @@
+.nav {
+  grid-area: n;
+  /* background: rgb(59, 104, 193); */
+  background: rgb(39, 39, 39);
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.item {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+}
+.item a.active {
+  color: darkorchid
+}

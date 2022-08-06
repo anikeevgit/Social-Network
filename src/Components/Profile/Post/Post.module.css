@@ -1,0 +1,38 @@
+.item {
+  min-height: 60px;
+  height: 60px;
+  width: 530px;
+  color: #ffffff;
+  margin-top: 10px;
+  border: 0.1px solid #5d5d5d;
+  border-radius: 40px;
+  background: rgb(59, 59, 59);
+  background: linear-gradient(
+    151deg,
+    rgba(59, 59, 59, 1) 17%,
+    rgba(39, 39, 39, 1) 40%,
+    rgba(29, 29, 29, 1) 51%,
+    rgba(15, 15, 15, 1) 80%,
+    rgba(10, 10, 10, 1) 100%
+  );
+}
+.item p {
+  max-width: 400px;
+  /* max-height: 460px; */
+  position: relative;
+  top: -75px;
+  left: 70px;
+}
+.item img {
+  /* margin-left: 10px; */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.item span {
+  color: rgb(244, 94, 94);
+  position: relative;
+  top: -110px;
+  left: 460px;
+}
