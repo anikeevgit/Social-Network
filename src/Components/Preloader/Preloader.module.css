@@ -1,20 +1,8 @@
-.usersBody {
-  color: white;
-}
-.userPhoto {
-  width: 100px;
-  border-radius: 50%;
-  background-color: rgb(45, 45, 45);
-  border: 1px solid darkorchid;
-}
-
-.selectedPage {
-  width: 100px;
-  font-weight: bold;
-  color: darkorchid;
-}
-
 .spinner {
+  position: relative;
+  margin: 0 auto;
+  left: -100px;
+  top: 255px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
