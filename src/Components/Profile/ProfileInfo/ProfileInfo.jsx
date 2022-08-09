@@ -1,6 +1,10 @@
+import Preloader from '../../Preloader/Preloader'
 import s from './ProfileInfo.module.css'
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />
+  }
   return (
     <div>
       <div>
@@ -10,29 +14,22 @@ const ProfileInfo = () => {
           alt='fon'
         />
       </div>
-      {/* <div className={s.left}>
-        <img
-          className={s.lls}
-          src='https://www.seekpng.com/png/full/154-1542974_purple-lightsaber-icon-purple-lightsaber.png'
-        />
-      </div> */}
       <div className={s.descriptionBlock}>
         <div className={s.ava}>
           <img
-            src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/14e99159d3ee3bee5393cb3223a6eec4ad1726be-1574853343.jpg'
+            src={
+              props.profile.photos.large
+                ? props.profile.photos.large
+                : 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/14e99159d3ee3bee5393cb3223a6eec4ad1726be-1574853343.jpg'
+            }
             alt='avatar'
           />
         </div>
         <div className={s.description}>
-          <p>Это я на Набу</p>
+          <p>{props.profile.aboutMe}</p>
+          {/* <p>Это я на Набу</p> */}
         </div>
       </div>
-      {/* <div className={s.right}>
-        <img
-          className={s.rls}
-          src='https://www.seekpng.com/png/full/154-1542974_purple-lightsaber-icon-purple-lightsaber.png'
-        />
-      </div> */}
     </div>
   )
 }
