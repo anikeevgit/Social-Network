@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
         <div className={s.ava}>
           <img
             src={
-              props.profile.photos.large
+              props.profile.photos.large != null
                 ? props.profile.photos.large
                 : 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/14e99159d3ee3bee5393cb3223a6eec4ad1726be-1574853343.jpg'
             }
