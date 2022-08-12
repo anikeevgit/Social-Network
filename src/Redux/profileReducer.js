@@ -1,3 +1,5 @@
+import { profileAPI } from '../Api/API'
+
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const SET_USER_PROFILE = 'SET-USER-PROFILE'
@@ -63,5 +65,15 @@ export const toggleIsFetching = (isFetching) => ({
   type: TOGGLE_IS_FETCHING,
   isFetching,
 })
+
+export const getID = (id) => {
+  return (dispatch) => {
+    dispatch(toggleIsFetching(true))
+    profileAPI.getID(id).then((data) => {
+      dispatch(toggleIsFetching(false))
+      dispatch(setUserProfile(data))
+    })
+  }
+}
 
 export default profileReducer
