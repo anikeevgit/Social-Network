@@ -66,10 +66,10 @@ export const toggleIsFetching = (isFetching) => ({
   isFetching,
 })
 
-export const getID = (id) => {
+export const getUserProfile = (id) => {
   return (dispatch) => {
     dispatch(toggleIsFetching(true))
-    profileAPI.getID(id).then((data) => {
+    profileAPI.getProfile(id).then((data) => {
       dispatch(toggleIsFetching(false))
       dispatch(setUserProfile(data))
     })
