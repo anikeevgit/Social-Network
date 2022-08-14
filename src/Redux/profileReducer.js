@@ -76,4 +76,4 @@ export const getUserProfile = (id) => {
   }
 }
 
-export default profileReducer
+export default profileReducer;
