@@ -14,10 +14,10 @@ export const withAuthRedirect = (Component) => {
     }
   }
 
-  let ConncetedAuthRedirectComponent = connect(
+  let ConnectedAuthRedirectComponent = connect(
     mapStateToPropsForRedirect,
     {}
   )(RedirectComponent)
 
-  return ConncetedAuthRedirectComponent
+  return ConnectedAuthRedirectComponent
 }
