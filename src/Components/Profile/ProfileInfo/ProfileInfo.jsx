@@ -1,5 +1,6 @@
 import Preloader from '../../Preloader/Preloader'
 import s from './ProfileInfo.module.css'
+import ProfileStatus from '../ProfileStatus/ProfileStatus'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -25,8 +26,13 @@ const ProfileInfo = (props) => {
             alt='avatar'
           />
         </div>
+
         <div className={s.description}>
-          <p>{props.profile.aboutMe}</p>
+          <ProfileStatus
+            status={props.status}
+            updateUserStatus={props.updateUserStatus}
+          />
+          {/* <p></p> */}
           {/* <p>Это я на Набу</p> */}
         </div>
       </div>
