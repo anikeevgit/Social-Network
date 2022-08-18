@@ -96,10 +96,10 @@ export const getUserStatus = (id) => {
 }
 export const updateUserStatus = (status) => {
   return (dispatch) => {
-    dispatch(toggleIsFetching(true))
+    // dispatch(toggleIsFetching(true))
     profileAPI.updateStatus(status).then((data) => {
       if (data.resultCode === 0) {
-        dispatch(toggleIsFetching(false))
+        // dispatch(toggleIsFetching(false))
         dispatch(setStatus(status))
       }
     })

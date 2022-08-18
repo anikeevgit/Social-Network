@@ -17,15 +17,24 @@ class ProfileStatus extends React.Component {
     this.props.updateUserStatus(this.state.status)
   }
   onStatusChange = (e) => {
-    this.setState({ status: e.currentTarget.value }) 
+    this.setState({ status: e.currentTarget.value })
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.status !== this.props.status) {
+      this.setState({ status: this.props.status })
+    }
   }
 
   render() {
+    console.log('render')
     return (
       <div className={s.status}>
         {this.state.editMode === false ? (
           <div className={s.test}>
-            <p onDoubleClick={this.activateEditMode}>{this.props.status || 'Frontend'}</p>
+            <p onDoubleClick={this.activateEditMode}>
+              {this.props.status || 'Frontend'}
+            </p>
           </div>
         ) : (
           <div>
