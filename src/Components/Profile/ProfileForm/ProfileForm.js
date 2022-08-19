@@ -1,15 +1,20 @@
 import React from 'react'
 // import s from '../Login.module.css'
 import { Field, reduxForm } from 'redux-form'
+import { required, maxLength } from '../../../utils/validators/validators'
+import { Textarea } from '../../common/FormsControls/FormsControls'
+
+const maxLength10 = maxLength(10)
 
 const AddNewPostForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
       <div>
         <Field
-          component='textarea'
           name='newPostText'
-          placeholder='Что у вас нового?'
+          validate={[required, maxLength10]}
+          component={Textarea}
+          placeholder={'Что у вас нового?'}
         />
       </div>
       <div>

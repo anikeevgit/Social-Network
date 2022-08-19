@@ -10,8 +10,8 @@ const MyPosts = (props) => {
 
   // let newPostElement = React.createRef()
 
-  const addNewPost = (formData) => {
-    props.addPost(formData.newPostText)
+  const addNewPost = (value) => {
+    props.addPost(value.newPostText)
   }
   return (
     <div className={s.postsBlock}>

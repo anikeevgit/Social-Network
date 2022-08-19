@@ -8,7 +8,7 @@ import {
   toggleIsFollowing,
   getUsers,
 } from '../../redux/usersReducer'
-import Preloader from '../Preloader/Preloader'
+import Preloader from '../common/Preloader/Preloader'
 import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 import { compose } from 'redux'
 

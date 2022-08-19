@@ -7,7 +7,7 @@ import {
   updateUserStatus,
 } from '../../redux/profileReducer'
 import { useParams } from 'react-router-dom'
-import Preloader from '../Preloader/Preloader'
+import Preloader from '../common/Preloader/Preloader'
 // import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 import { compose } from 'redux'
 // import { profileAPI } from '../../Api/API'
